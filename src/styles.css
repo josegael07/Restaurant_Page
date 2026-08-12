@@ -1,0 +1,140 @@
+:root {
+    --background: rgb(255, 243, 214);
+    --secondary: rgb(243, 208, 167);
+    --text: rgb(43, 27, 20);
+    --muted-text: rgb(128, 111, 99);
+    --primary: rgb(216, 58, 46);
+    --primary-hover: rgb(173, 41, 33);
+    --lime: rgb(107, 155, 55);
+    --yellow: rgb(242, 182, 50);
+  }
+
+*{
+    padding: 0;
+    margin: 0;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+    color: var(--text)
+}
+
+body, html {
+    height: 100%;
+    background-image: url("./photos/quesabirria.jpg");
+    background-size: 105% auto;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    display: flex;
+    flex-direction: column;
+}
+
+header{
+    background-color: var(--secondary);
+    padding: 1rem 2rem;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, .2);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid var(--text);
+}
+header div{
+    font-size: 3rem;
+    letter-spacing: .25em;
+    font-weight: 600;
+}
+nav{
+    display: flex;
+    gap: 3rem;
+    padding-right: 10rem;
+}
+nav button{
+    font-size: 1.25rem;
+    background: none;
+    border: none;
+}
+nav button:hover{
+    color: var(--muted-text);
+    border-bottom: 2px solid var(--muted-text);
+}
+
+.slogan{
+    background: RGB(0, 0, 0, .5);
+    height: 50vh;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.slogan-container{
+    color: var(--background);
+    font-size: 6.5rem;
+    font-weight: 550;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: .25rem;
+}
+#tacos{
+    padding-left: 35vw;
+}
+#flavor{
+    padding-left: 40vw;
+}
+#tradition{
+    padding-left: 45vw;
+}
+
+.description{
+    background-color: var(--secondary);
+    display: flex;
+    flex-direction: column;
+}
+.desc{
+    display: flex;
+    padding: 0 2em 1em 2em;
+    font-size: 1.5rem;
+}
+.desc img{
+    padding-right: 2em;
+    height: 300px;
+}
+.container{
+    display: flex;
+    flex-direction: column;
+    gap: 2em;
+    align-items: center;
+}
+
+.favs{
+    background-color: var(--secondary);
+    padding: 1rem 2rem;
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, .2);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    border-top: 2px solid var(--text);
+    border-bottom: 2px solid var(--text);
+}
+.title{
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 1em;
+}
+.foods{
+    display: flex;
+    justify-content: space-evenly;
+}
+.fav-tacos, .fav-birria, .fav-elote{
+    outline: var(--text) solid 2px;
+}
+img{
+    height: 200px;
+}
+
+#order-now{
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    width: 10rem;
+}
+#order-now:hover{
+    color: var(--muted-text);
+}

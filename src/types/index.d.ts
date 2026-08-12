@@ -1,2 +1,2 @@
-import "./styles.css";
+declare module "*.css";
 //# sourceMappingURL=index.d.ts.map
