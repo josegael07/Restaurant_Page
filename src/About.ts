@@ -1,5 +1,5 @@
 
-function createAboutPage(): void {
+function createAboutPage(content: HTMLDivElement): void {
 
 }
 

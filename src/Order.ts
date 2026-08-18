@@ -1,6 +1,6 @@
 
 
-function createOrderPage(): void {
+function createOrderPage(content: HTMLDivElement): void {
 
 }
 

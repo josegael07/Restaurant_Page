@@ -15,10 +15,19 @@ function clear(): void{
     content.textContent = "";
 }
 
-homeBtn.addEventListener("click", createHomePage);
-orderBtn.addEventListener("click", createOrderPage);
-aboutBtn.addEventListener("click", createAboutPage);
+homeBtn.addEventListener("click", () => {
+    clear();
+    createHomePage(content);
+});
+orderBtn.addEventListener("click", () => {
+    clear();
+    createOrderPage(content);
+});
+aboutBtn.addEventListener("click", () => {
+    clear();
+    createAboutPage(content);
+});
 
 
 
-createHomePage();
+createHomePage(content);
