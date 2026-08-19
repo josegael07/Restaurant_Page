@@ -7,103 +7,169 @@
     --primary-hover: rgb(173, 41, 33);
     --lime: rgb(107, 155, 55);
     --yellow: rgb(242, 182, 50);
-  }
+}
 
-*{
+/* =========================
+   GENERAL
+   ========================= */
+
+* {
     padding: 0;
     margin: 0;
-    font-family:Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    font-family: Georgia, 'Times New Roman', Times, serif;
 }
 
-body, html {
-    height: 100%;
-    background-image: url("./photos/quesabirria.jpg");
-    background-size: 105% auto;
-    background-position: center;
-    background-repeat: no-repeat;
-
-    display: flex;
-    flex-direction: column;
+html,
+body {
+    min-height: 100%;
+    background-color: var(--background);
+    color: var(--text);
 }
 
-header{
+/* =========================
+   HEADER
+   ========================= */
+
+header {
     background-color: var(--secondary);
     padding: 1rem 2rem;
     box-shadow: 0px 3px 3px rgba(0, 0, 0, .2);
-
     display: flex;
     justify-content: space-between;
     align-items: center;
     border-bottom: 2px solid var(--text);
 }
-header div{
+
+header div {
     font-size: 3rem;
     letter-spacing: .25em;
     font-weight: 600;
 }
-nav{
+
+nav {
     display: flex;
     gap: 3rem;
     padding-right: 10rem;
 }
-nav button{
+
+nav button {
     font-size: 1.25rem;
     background: none;
     border: none;
+    color: var(--text);
+    cursor: pointer;
 }
-nav button:hover{
+
+nav button:hover {
     color: var(--muted-text);
     border-bottom: 2px solid var(--muted-text);
 }
 
-.slogan{
-    background: RGB(0, 0, 0, .5);
-    height: 50vh;
+/* =========================
+   GENERAL IMAGES
+   ========================= */
 
+img {
+    height: 200px;
+}
+
+/* =========================================================
+   HOME PAGE
+   ========================================================= */
+
+/* =========================
+   HOME SLOGAN
+   ========================= */
+
+.slogan {
+    background-color: rgba(0, 0, 0, .5);
+    height: 50vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
+    background-image: url("./photos/quesabirria.jpg");
+    background-size: cover;
+    background-position: center;
 }
-.slogan-container{
+
+.slogan-container {
     color: var(--background);
     font-size: 6.5rem;
     font-weight: 550;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     letter-spacing: .25rem;
 }
-#tacos{
+
+#tacos {
     padding-left: 35vw;
 }
-#flavor{
+
+#flavor {
     padding-left: 40vw;
 }
-#tradition{
+
+#tradition {
     padding-left: 45vw;
 }
 
-.description{
+/* =========================
+   HOME DESCRIPTION
+   ========================= */
+
+.description {
     background-color: var(--secondary);
     display: flex;
     flex-direction: column;
     padding-top: 1em;
 }
-.desc{
+
+.title {
+    font-size: 2em;
+    text-align: center;
+    padding-bottom: 1em;
+}
+
+.desc {
     display: flex;
     padding: 0 2em 1em 2em;
     font-size: 1.5rem;
 }
-.desc img{
+
+.desc img {
     padding-right: 2em;
     height: 300px;
 }
-.container{
+
+.container {
     display: flex;
     flex-direction: column;
     gap: 2em;
     align-items: center;
 }
 
-.favs{
+/* =========================
+   HOME ORDER BUTTON
+   ========================= */
+
+#order-now {
+    background: none;
+    border: none;
+    font-size: 1.25rem;
+    width: 10rem;
+    color: var(--text);
+    cursor: pointer;
+}
+
+#order-now:hover {
+    color: var(--muted-text);
+}
+
+/* =========================
+   HOME FAVORITES
+   ========================= */
+
+.favs {
     background-color: var(--secondary);
     padding: 1rem 2rem;
     box-shadow: 0px 3px 3px rgba(0, 0, 0, .2);
@@ -113,48 +179,482 @@ nav button:hover{
     border-top: 2px solid var(--text);
     border-bottom: 2px solid var(--text);
 }
-.title{
-    font-size: 2em;
-    text-align: center;
-    padding-bottom: 1em;
-}
-.foods{
+
+.foods {
     display: flex;
     justify-content: space-evenly;
 }
-.fav-tacos, .fav-birria, .fav-elote{
+
+.fav-tacos,
+.fav-birria,
+.fav-elote {
     outline: var(--text) solid 2px;
 }
-img{
+
+.fav-tacos img,
+.fav-birria img,
+.fav-elote img {
     height: 200px;
 }
 
-#order-now{
-    background: none;
-    border: none;
+/* =========================
+   FOOD NAME / PRICE
+   ========================= */
+
+.name {
     font-size: 1.25rem;
-    width: 10rem;
-}
-#order-now:hover{
-    color: var(--muted-text);
+    padding: .5rem;
 }
 
-footer{
+.price {
+    color: var(--primary);
+    font-size: 1.1rem;
+    padding-bottom: .5rem;
+}
+
+/* =========================================================
+   MENU PAGE
+   ========================================================= */
+
+/* =========================
+   MENU HERO
+   ========================= */
+
+.menu-hero {
+    background-color: var(--secondary);
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid var(--text);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, .2);
+}
+
+.menu-hero-title {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 6rem;
+    letter-spacing: .3rem;
+    color: var(--text);
+}
+
+.menu-hero-subtitle {
+    font-size: 1.5rem;
+    letter-spacing: .25rem;
+    color: var(--primary);
+    margin-top: .5rem;
+}
+
+/* =========================
+   MENU CONTAINER
+   ========================= */
+
+.menu {
+    background-color: var(--background);
+    padding: 3rem 15vw;
+}
+
+/* =========================
+   MENU SECTIONS
+   ========================= */
+
+.menu-section {
+    margin-bottom: 3rem;
+}
+
+.menu-section h2 {
+    font-size: 2.5rem;
+    letter-spacing: .15rem;
+    color: var(--primary);
+    border-bottom: 2px solid var(--text);
+    padding-bottom: .5rem;
+    margin-bottom: 1rem;
+}
+
+/* =========================
+   MENU ITEMS
+   ========================= */
+
+.menu-item {
+    background-color: var(--secondary);
+    width: 100%;
+    min-height: 110px;
+    margin-bottom: 1rem;
+    padding: 1rem 1.5rem;
+    border: 2px solid var(--text);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 3px 3px 0px rgba(43, 27, 20, .25);
+}
+
+/* =========================
+   MENU ITEM IMAGE
+   ========================= */
+
+.menu-item img {
+    width: 130px;
+    height: 100px;
+    object-fit: cover;
+    margin-right: 1.5rem;
+    border: 2px solid var(--text);
+}
+
+/* =========================
+   MENU ITEM INFO
+   ========================= */
+
+.menu-item-info {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: .4rem;
+}
+
+.menu-item-name {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+.menu-item-description {
+    font-size: 1rem;
+    color: var(--muted-text);
+    line-height: 1.4;
+    max-width: 700px;
+}
+
+/* =========================
+   MENU PRICE
+   ========================= */
+
+.menu-item-price {
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--primary);
+    width: 80px;
+    text-align: right;
+}
+
+/* =========================
+   MENU ITEM HOVER
+   ========================= */
+
+.menu-item:hover {
+    background-color: rgb(238, 196, 148);
+    transform: translateY(-2px);
+    box-shadow: 5px 5px 0px rgba(43, 27, 20, .3);
+    transition: .15s ease;
+}
+
+/* =========================================================
+   ABOUT PAGE
+   ========================================================= */
+
+/* =========================
+   ABOUT HERO
+   ========================= */
+
+.about-hero {
+    background-color: var(--secondary);
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid var(--text);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, .2);
+}
+
+.about-hero-title {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 6rem;
+    letter-spacing: .3rem;
+    color: var(--text);
+}
+
+.about-hero-subtitle {
+    font-size: 1.5rem;
+    letter-spacing: .25rem;
+    color: var(--primary);
+    margin-top: .5rem;
+}
+
+/* =========================
+   ABOUT CONTENT
+   ========================= */
+
+.about {
+    background-color: var(--background);
+    padding: 4rem 15vw;
+}
+
+/* =========================
+   ABOUT SECTIONS
+   ========================= */
+
+.about-section {
+    background-color: var(--secondary);
+    padding: 2rem;
+    margin-bottom: 2rem;
+    border: 2px solid var(--text);
+    box-shadow: 4px 4px 0px rgba(43, 27, 20, .25);
+}
+
+.about-section h2 {
+    color: var(--primary);
+    font-size: 2.5rem;
+    letter-spacing: .15rem;
+    border-bottom: 2px solid var(--text);
+    padding-bottom: .5rem;
+    margin-bottom: 1rem;
+}
+
+.about-section p {
+    color: var(--text);
+    font-size: 1.25rem;
+    line-height: 1.7;
+}
+
+/* =========================
+   ABOUT QUOTE
+   ========================= */
+
+.about-quote {
+    text-align: center;
+    color: var(--primary);
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 3rem;
+    letter-spacing: .2rem;
+    padding: 2rem 0;
+}
+
+/* =========================================================
+   ABOUT / ORDER FORM
+   ========================================================= */
+
+/* =========================
+   FORM CONTAINER
+   ========================= */
+
+.about-form-container {
+    background-color: var(--secondary);
+    width: 700px;
+    margin: 3rem auto 0 auto;
+    padding: 2rem;
+    border: 2px solid var(--text);
+    box-shadow: 5px 5px 0px rgba(43, 27, 20, .3);
+}
+
+/* =========================
+   FORM TITLE
+   ========================= */
+
+.about-form-title {
+    color: var(--primary);
+    font-size: 2.5rem;
+    text-align: center;
+    letter-spacing: .15rem;
+    border-bottom: 2px solid var(--text);
+    padding-bottom: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+/* =========================
+   FORM
+   ========================= */
+
+.about-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* =========================
+   FORM GROUPS
+   ========================= */
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: .5rem;
+}
+
+.form-group label {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--text);
+}
+
+/* =========================
+   INPUTS
+   ========================= */
+
+.form-group input,
+.form-group textarea {
+    background-color: var(--background);
+    border: 2px solid var(--text);
+    padding: .75rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.1rem;
+    color: var(--text);
+    box-sizing: border-box;
+}
+
+.form-group input {
+    height: 45px;
+}
+
+.form-group textarea {
+    height: 180px;
+    resize: none;
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+    outline: none;
+    border-color: var(--primary);
+}
+
+/* =========================
+   FORM BUTTON
+   ========================= */
+
+#place-order {
+    background-color: var(--primary);
+    color: var(--background);
+    border: 2px solid var(--text);
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1.25rem;
+    padding: .75rem;
+    cursor: pointer;
+}
+
+#place-order:hover {
+    background-color: var(--primary-hover);
+}
+
+/* =========================
+   FORM MESSAGE
+   ========================= */
+
+.order-message {
+    color: var(--lime);
+    text-align: center;
+    font-size: 1.1rem;
+}
+
+/* =========================================================
+   ORDER PAGE
+   ========================================================= */
+
+/* =========================
+   ORDER HERO
+   ========================= */
+
+.order-hero {
+    background-color: var(--secondary);
+    height: 35vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 2px solid var(--text);
+    box-shadow: 0px 3px 3px rgba(0, 0, 0, .2);
+}
+
+.order-hero-title {
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 6rem;
+    letter-spacing: .3rem;
+    color: var(--text);
+}
+
+.order-hero-subtitle {
+    font-size: 1.5rem;
+    letter-spacing: .25rem;
+    color: var(--primary);
+    margin-top: .5rem;
+}
+
+/* =========================
+   ORDER CONTAINER
+   ========================= */
+
+.order {
+    background-color: var(--background);
+    padding: 4rem 15vw;
+    display: flex;
+    justify-content: center;
+}
+
+/* =========================
+   ORDER FORM
+   ========================= */
+
+.order-form {
+    background-color: var(--secondary);
+    width: 700px;
+    padding: 2rem;
+    border: 2px solid var(--text);
+    box-shadow: 5px 5px 0px rgba(43, 27, 20, .3);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* =========================
+   ORDER FORM TITLE
+   ========================= */
+
+.order-form-title {
+    font-size: 2.5rem;
+    color: var(--primary);
+    text-align: center;
+    border-bottom: 2px solid var(--text);
+    padding-bottom: 1rem;
+}
+
+/* =========================================================
+   FOOTER
+   ========================================================= */
+
+footer {
     display: flex;
     justify-content: space-evenly;
     background-color: var(--muted-text);
     color: var(--background);
     text-align: center;
     padding: 1em 0;
+    border-top: 2px solid var(--text);
 }
-a{
+
+a {
     color: var(--background);
 }
-.footer-title{
+
+.footer-title {
     font-size: 1.5em;
     font-weight: 600;
 }
-.contact{
+
+.footer-container {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.contact {
     display: flex;
     gap: 1em;
+}
+
+.contact-way {
+    display: flex;
+    flex-direction: column;
+    gap: .25rem;
+}
+
+.hours {
+    gap: .25rem;
 }

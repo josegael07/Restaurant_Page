@@ -74,6 +74,7 @@ function createHomePage(content: HTMLDivElement): void {
 
     // Order button functionality
     orderNowBtn.addEventListener("click", () => {
+        content.textContent = "";
         createOrderPage(content);
     });
 
